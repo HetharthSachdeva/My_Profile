@@ -19,6 +19,10 @@ body{
 
 nav{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     height: 10vh;
     position: sticky;
 }
@@ -355,7 +359,7 @@ section{
     }
   }
 
-.skills-container{
+  .skills-container {
     background-color: #000;
     height: 100vh;
     width: 100vw;
@@ -364,12 +368,11 @@ section{
     align-items: center;
     justify-content: start;
     margin: 20px;
-    /* box-shadow: 0 20px 0 #464848; */
-    
 }
-.skills-container .skills{
-    color:#ffffff;
-    text-decoration: underline #B0FFFF 5px; 
+
+.skills-container .skills {
+    color: #ffffff;
+    text-decoration: underline #B0FFFF 5px;
     font-weight: 700;
     font-size: 40px;
     position: absolute;
@@ -379,58 +382,83 @@ section{
     width: 100px;
     height: 50px;
 }
-.skills-container h1{
+
+.skills-container h1 {
     color: #B0FFFF;
     text-shadow: 0 0 5px #B0FFFF;
 }
 
-.skills-container p{
+.skills-container p {
     color: #fff;
 }
 
-.skills-container table{
+.skills-container .table {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 70%;
+    margin: 0 10px; /* Add margin to the sides */
 }
 
-.skills-container table tr{
+.skills-container .table .row {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.skills-container table td{
+.skills-container .table .td {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
     justify-content: center;
-    margin: 35px;
-    margin-bottom: 20px;
+    margin: 10px; /* Adjust margin for spacing */
     box-shadow: 5px 5px 10px #464848;
     padding: 30px;
-    width: 13rem;
+    width: calc(25% - 20px); /* Four divs in one row with margin */
     height: 15rem;
     border-radius: 15%;
 }
 
-.skills-container table td i{
+.skills-container .table .td i {
     font-size: 7rem;
 }
-.skills-container table td img{
+
+.skills-container .table .td img {
     width: 7rem;
     height: 7rem;
     border-radius: 100%;
 }
 
-.skills-container table td h4{
+.skills-container .table .td h4 {
     color: #fff;
     font-size: 0.9rem;
 }
 
+/* Responsive design */
+@media (max-width: 1200px) {
+    .skills-container .table .td {
+        width: calc(33.33% - 20px); /* Three divs in one row */
+    }
+    .skills-container .skills{
+        opacity:0%;
+    }
+}
 
+@media (max-width: 900px) {
+    .skills-container .table .td {
+        width: calc(50% - 20px); /* Two divs in one row */
+    }
+    .skills-container .skills{
+        opacity:0%;
+    }
+}
 
-
-
-
+@media (max-width: 600px) {
+    .skills-container .table .td {
+        width: calc(100% - 20px); /* One div in one row */
+    }
+    .skills-container .skills{
+        opacity:0%;
+    }
+}
