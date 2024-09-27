@@ -440,9 +440,7 @@ section{
     .skills-container .table .td {
         width: calc(33.33% - 20px); /* Three divs in one row */
     }
-    .skills-container .skills{
-        opacity:0%;
-    }
+    
 }
 
 @media (max-width: 900px) {
